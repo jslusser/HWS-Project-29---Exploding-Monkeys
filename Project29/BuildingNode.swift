@@ -7,9 +7,15 @@
 //  https://www.hackingwithswift.com/read/29/overview
 //
 
+import GameplayKit
 import SpriteKit
 import UIKit
-import GameplayKit
+
+enum CollisionTypes: UInt32 {
+    case banana = 1
+    case building = 2
+    case player = 4
+}
 
 class BuildingNode: SKSpriteNode {
     var currentImage: UIImage!
@@ -71,5 +77,23 @@ class BuildingNode: SKSpriteNode {
         }
         
         return img
+    }
+    
+    func hitAt(point: CGPoint) {
+        let convertedPoint = CGPoint(x: point.x + size.width / 2.0, y: abs(point.y - (size.height / 2.0)))
+        
+        let renderer = UIGraphicsImageRenderer(size: size)
+        let img = renderer.image { ctx in
+            currentImage.draw(at: CGPoint(x: 0, y: 0))
+            
+            ctx.cgContext.addEllipse(in: CGRect(x: convertedPoint.x - 32, y: convertedPoint.y - 32, width: 64, height: 64))
+            ctx.cgContext.setBlendMode(.clear)
+            ctx.cgContext.drawPath(using: .fill)
+        }
+        
+        texture = SKTexture(image: img)
+        currentImage = img
+        
+        configurePhysics()
     }
 }

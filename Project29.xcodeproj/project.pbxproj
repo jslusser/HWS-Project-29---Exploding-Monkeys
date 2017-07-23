@@ -17,6 +17,9 @@
 		9434D4031F23D59500D8D65B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9434D4011F23D59500D8D65B /* LaunchScreen.storyboard */; };
 		9434D40B1F23D61A00D8D65B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434D40A1F23D61A00D8D65B /* Helper.swift */; };
 		9441BBB51F23FEC700FA46F8 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9441BBB41F23FEC700FA46F8 /* BuildingNode.swift */; };
+		9441BBB71F24E44500FA46F8 /* Assets.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9441BBB61F24E44500FA46F8 /* Assets.atlas */; };
+		9441BBC21F24E54300FA46F8 /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9441BBC01F24E54300FA46F8 /* hitBuilding.sks */; };
+		9441BBC31F24E54300FA46F8 /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9441BBC11F24E54300FA46F8 /* hitPlayer.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		9434D4041F23D59500D8D65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9434D40A1F23D61A00D8D65B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9441BBB41F23FEC700FA46F8 /* BuildingNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
+		9441BBB61F24E44500FA46F8 /* Assets.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Assets.atlas; sourceTree = "<group>"; };
+		9441BBC01F24E54300FA46F8 /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
+		9441BBC11F24E54300FA46F8 /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,10 @@
 				9434D3F81F23D59500D8D65B /* GameScene.swift */,
 				9434D3FA1F23D59500D8D65B /* GameViewController.swift */,
 				9434D3FC1F23D59500D8D65B /* Main.storyboard */,
+				9441BBC01F24E54300FA46F8 /* hitBuilding.sks */,
+				9441BBC11F24E54300FA46F8 /* hitPlayer.sks */,
 				9434D3FF1F23D59500D8D65B /* Assets.xcassets */,
+				9441BBB61F24E44500FA46F8 /* Assets.atlas */,
 				9434D4011F23D59500D8D65B /* LaunchScreen.storyboard */,
 				9434D4041F23D59500D8D65B /* Info.plist */,
 				9434D40A1F23D61A00D8D65B /* Helper.swift */,
@@ -142,7 +151,10 @@
 				9434D3FE1F23D59500D8D65B /* Main.storyboard in Resources */,
 				9434D3F51F23D59500D8D65B /* GameScene.sks in Resources */,
 				9434D4001F23D59500D8D65B /* Assets.xcassets in Resources */,
+				9441BBC21F24E54300FA46F8 /* hitBuilding.sks in Resources */,
 				9434D4031F23D59500D8D65B /* LaunchScreen.storyboard in Resources */,
+				9441BBB71F24E44500FA46F8 /* Assets.atlas in Resources */,
+				9441BBC31F24E54300FA46F8 /* hitPlayer.sks in Resources */,
 				9434D3F71F23D59500D8D65B /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

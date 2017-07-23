@@ -6,40 +6,22 @@
 //  Copyright © 2017 James Slusser. All rights reserved.
 //  https://www.hackingwithswift.com/read/29/overview
 //
-
 import UIKit
 import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
+    var currentGame: GameScene!
+    
     @IBOutlet weak var angleSlider: UISlider!
     @IBOutlet weak var angleLabel: UILabel!
+    
     @IBOutlet weak var velocitySlider: UISlider!
     @IBOutlet weak var velocityLabel: UILabel!
+    
     @IBOutlet weak var launchButton: UIButton!
     @IBOutlet weak var playerNumber: UILabel!
     
-    @IBAction func angleChanged(_ sender: UISlider) {
-        angleLabel.text = "Angle: \(Int(angleSlider.value))°"
-    }
-    
-    @IBAction func velocityChanged(_ sender: UISlider) {
-        velocityLabel.text = "Velocity: \(Int(velocitySlider.value))"
-    }
-    @IBAction func launch(_ sender: UIButton) {
-        angleSlider.isHidden = true
-        angleLabel.isHidden = true
-        
-        velocitySlider.isHidden = true
-        velocityLabel.isHidden = true
-        
-        launchButton.isHidden = true
-        
-        currentGame.launch(angle: Int(angleSlider.value), velocity: Int(velocitySlider.value))
-    }
-    
-    var currentGame: GameScene!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,11 +47,11 @@ class GameViewController: UIViewController {
             view.showsNodeCount = true
         }
     }
-
+    
     override var shouldAutorotate: Bool {
         return true
     }
-
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -77,14 +59,34 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction func angleChanged(_ sender: AnyObject) {
+        angleLabel.text = "Angle: \(Int(angleSlider.value))°"
+    }
+    
+    @IBAction func velocityChanged(_ sender: AnyObject) {
+        velocityLabel.text = "Velocity: \(Int(velocitySlider.value))"
+    }
+    
+    @IBAction func launch(_ sender: AnyObject) {
+        angleSlider.isHidden = true
+        angleLabel.isHidden = true
+        
+        velocitySlider.isHidden = true
+        velocityLabel.isHidden = true
+        
+        launchButton.isHidden = true
+        
+        currentGame.launch(angle: Int(angleSlider.value), velocity: Int(velocitySlider.value))
     }
     
     func activatePlayer(number: Int) {
@@ -102,5 +104,4 @@ class GameViewController: UIViewController {
         
         launchButton.isHidden = false
     }
-
 }
